@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="main-stylesheet" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1 class="h" style="margin-left: 10px;">Do you want to go out with me?</h1>
+        <img class="img" style="height: 250px; width: 250px;" src="output-onlinegiftools.gif" alt="">
+        <div class="buttons">
+           <div class="btn1">Yes</div>
+           <div class="btn2">No</div>
+        </div>
+    </div>
+</body>
+<script>
+    const loginclk = document.querySelector('.btn1')
+    const fly = document.querySelector('.btn2');
+    const h1 = document.querySelector('.h');
+    const img = document.querySelector('img')
+    const main = document.querySelector('.main')
+
+
+    loginclk.addEventListener('click', () => {
+    const linkElement = document.createElement('link');
+    const anchor = document.createElement('a');
+    anchor.textContent = "Let's talk on Instagram !! Click on it";
+    anchor.href = "https://www.instagram.com/sarvottam_shirvastava?igsh=MTF0bGU4NGh2c2U1eA==";
+    main.appendChild(anchor);
+    h1.textContent = "Yeeyyy!  Finallyyyy";
+    img.src='new.gif'
+    loginclk.textContent= "Let's fix a date!"
+    linkElement.rel = 'stylesheet';
+    linkElement.href = 'style1.css';
+    document.head.appendChild(linkElement);
+});
+
+    const mainStylesheet = document.getElementById('main-stylesheet');
+
+    fly.addEventListener('click', () => {
+      const currentStylesheet = mainStylesheet.getAttribute('href');
+      if (currentStylesheet === 'style.css') {
+        mainStylesheet.href = 'style2.css';
+      } 
+      else {
+        mainStylesheet.href = 'style.css';
+      }
+    });
+</script>
+</html>
